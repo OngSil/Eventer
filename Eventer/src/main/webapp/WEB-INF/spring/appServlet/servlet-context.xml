@@ -29,7 +29,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.eventer.controller" />
+	<context:component-scan base-package="eventer.com.controller" />
 	
 	
 	

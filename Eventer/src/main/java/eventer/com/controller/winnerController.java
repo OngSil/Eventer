@@ -1,4 +1,4 @@
-package com.eventer.controller;
+package eventer.com.controller;
 
 import java.util.Locale;
 
@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class indexController {
+public class winnerController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(indexController.class);
+	private static final Logger logger = LoggerFactory.getLogger(winnerController.class);
 	
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/winner.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {			
-		return "index";
+		return "winner";
 	}
 	
 }
