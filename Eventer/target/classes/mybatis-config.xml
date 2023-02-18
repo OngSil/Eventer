@@ -12,21 +12,10 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     
-    <!-- 
     <typeAliases>	
-    	<typeAlias alias="About"   type="banwol.com.domain.About"/>
-    	<typeAlias alias="History" type="banwol.com.domain.History"/>
-    	<typeAlias alias="News" type="banwol.com.domain.News"/>
-    	<typeAlias alias="Sermon" type="banwol.com.domain.Sermon"/>
-    	<typeAlias alias="Contact" type="banwol.com.domain.Contact"/>
-    	<typeAlias alias="Album" type="banwol.com.domain.Album"/>
- 
-    	<typeAlias alias="ContactVo" type="banwol.com.vo.ContactVo"/>
-    	<typeAlias alias="NewsVo" type="banwol.com.vo.NewsVo"/>
+    	<typeAlias alias="Member"   type="eventer.com.domain.Member"/>
     </typeAliases>
-  -->
-     
-   
+ 	 
    <mappers>
     	
    </mappers>

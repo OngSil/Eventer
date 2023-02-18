@@ -43,21 +43,47 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="#">
+                        
+                        <form action="/signup.do">
                             <div class="input__item">
-                                <input type="text" placeholder="Email address">
+                                <input type="text" placeholder="Email address" name="user_id">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Name">
+                                <input type="text" placeholder="Your Name" name="name"> 
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Password">
+                                <input type="password" placeholder="Password" name="password">
                                 <span class="icon_lock"></span>
                             </div>
-                            <button type="submit" class="site-btn">Login Now</button>
+                            <div class="input__item">
+                                <input type="text" placeholder="Phone" name="phone">
+                                <span class="icon_lock"></span>
+                            </div>
+                          
+                            
+                             <div class="input__item">
+                                <input type="text" placeholder="interest item1" name="interest_item1">
+                                <span class="icon_lock"></span>
+                            </div>
+                            
+                             <div class="input__item">
+                                <input type="text" placeholder="interest item2" name="interest_item2">
+                                <span class="icon_lock"></span>
+                            </div>
+                            
+                             <div class="input__item">
+                                <input type="text" placeholder="interest item3" name="interest_item3">  
+                                <span class="icon_lock"></span>
+                            </div>
+                            
+                            <!-- user 유형 - 01:일반회원  02:host -->
+                            <input type="hidden"  placeholder="userType" name="user_type" value="01">
+                            
+                            <button type="submit" class="site-btn">회원가입</button>
                         </form>
+                        
                         <h5>Already have an account? <a href="#">Log In!</a></h5>
                     </div>
                 </div>

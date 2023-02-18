@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="eventer.com.mapper.MemberMapper">
+	<select id="doSignUp" parameterType="Member">
+		insert 
+		  into event_user
+	    values (
+		     #{seqNo}
+		   , #{userType}
+		   , #{name}
+		   , #{userId}
+		   , #{phone}
+		   , #{email}
+		   , #{phone}	  
+		   , now()
+		   , #{ineterestItem1}
+		   , #{ineterestItem2}
+		   , #{ineterestItem3}
+		  ) 
+	</select>	
+	
+	<select id="getMemberSeqNo" resultType="Int">
+		select COALESCE(MAX(seq_no), 0)+1 from event_user;
+	</select>	
+</mapper>
+
+
+	
