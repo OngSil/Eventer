@@ -12,10 +12,11 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     
+	<!-- 
     <typeAliases>	
     	<typeAlias alias="Member"   type="eventer.com.domain.Member"/>
     </typeAliases>
- 	 
+ 	 -->
    <mappers>
     	
    </mappers>

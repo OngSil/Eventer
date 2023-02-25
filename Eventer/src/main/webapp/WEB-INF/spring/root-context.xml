@@ -19,17 +19,17 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
+	
 	<!-- MySQL -->
     <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <!-- <property name="driverClassName" value="org.mysql.jdbc.Driver"></property> -->
+        <!-- <property name="driverClassName" value="com.mariadb.cj.jdbc.Driver"></property>  -->
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-        
         <property name="url"
             value="jdbc:mysql://localhost:3306/eventer?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC">
         </property>
-        <property name="username" value="eventer"></property>
-        <property name="password" value="eventer"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="hiya!1217"></property>
     </bean>
 	 
 	<bean id="sqlSessionFactory"
@@ -39,9 +39,14 @@
 			 value="classpath:/mybatis-config.xml"/>
 	</bean>
 	
+	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
   		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
  	</bean>
+ 	
+ 	
+ 	
+ 	
  	
  	<!-- Transaction -->
 	<bean id="transactionManager"
@@ -52,6 +57,7 @@
  	
  	
  	<context:component-scan base-package="eventer.com.*"/>
+ 	
  	<mybatis-spring:scan base-package="eventer.com.mapper"/>
 
 </beans>

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import eventer.com.domain.Member;
 import eventer.com.mapper.MemberMapper;
+import eventer.com.vo.MemberVo;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -14,8 +15,8 @@ public class MemberServiceImpl implements MemberService {
 	private MemberMapper memberMapper;
 	
 	@Override
-	public void doSignUp(Member member) {
-		memberMapper.doSignUp(member);
+	public void doSignUp(MemberVo memberVo) {
+		memberMapper.doSignUp(memberVo);
 	}
 	
 	@Override

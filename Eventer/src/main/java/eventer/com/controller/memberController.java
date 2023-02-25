@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import eventer.com.domain.Member;
 import eventer.com.service.MemberService;
+import eventer.com.vo.MemberVo;
 
 @Controller
 public class memberController {
@@ -33,21 +34,21 @@ public class memberController {
 	          
 	@RequestMapping(value = "/signup.do")
 	public String signup(String user_id, String name, String password, String phone, String interest_item1, String interest_item2, String interest_item3, String user_type) {	
-		Member member = new Member();
+		MemberVo memberVo = new MemberVo();
 		
 		int seqNo = memberService.getMemberSeqNo();
-		member.setSeq_no(seqNo);
+		memberVo.setSeq_no(seqNo);
 		
-		member.setUser_id(user_id);
-		member.setName(name);
-		member.setPassword(password);
-		member.setPhone(phone);
-		member.setInterest_item1(interest_item1);
-		member.setInterest_item2(interest_item2);
-		member.setInterest_item3(interest_item3);
-		member.setUser_type(user_type);
+		memberVo.setUser_id(user_id);
+		memberVo.setName(name);
+		memberVo.setPassword(password);
+		memberVo.setPhone(phone);
+		memberVo.setInterest_item1(interest_item1);
+		memberVo.setInterest_item2(interest_item2);
+		memberVo.setInterest_item3(interest_item3);
+		memberVo.setUser_type(user_type);
 		
-		memberService.doSignUp(member);
+		memberService.doSignUp(memberVo);
 		return "signup";
 	}
 }
